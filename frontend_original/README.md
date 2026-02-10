@@ -2,8 +2,7 @@
 > (Chaos, Circles, Freerooms, Notangles, Structs, Warchest).
 
 # DevSoc Subcommittee Recruitment: Frontend
-
-> **YOU DO NOT NEED TO COMPLETE ALL PARTS.**
+> **YOU DO NOT NEED TO COMPLETE ALL PARTS.** 
 > Complete the parts that you think best reflect your skills (feel free to do any order).
 
 ## Overview and Expectations
@@ -13,7 +12,7 @@
 - This is a qualitative technical assessment that will be reviewed by Project Directors to make a judgment on progressing your application to an interview.
 - There are no exact marks associated with the completion of individual components. Your code will be judged on its structure, style and adherence to frontend conventions to create a visually similar product to the specified goal.
 - This technical task is **not compulsory** for all projects. You may judge the relevance of this task to the project and role you are applying for. Check the [README](../README.md) for specific details as some projects require the completion of one or all tasks.
-    - We will be making a judgement based on your holistic application which includes your application answers and may include either or both this and the backend task.
+  - We will be making a judgement based on your holistic application which includes your application answers and may include either or both this and the backend task.
 
 ## Tasks
 
@@ -29,7 +28,7 @@ You are given the freedom to choose how you recreate this.
 
 - You may decide to use a single `.html` file.
 - You can also use any frontend framework or library as the foundation of your page.
-    - These include but are not limited to `React`, `Angular`, `Vue` as well as `Next.js` or `Gatsby.js`.
+  - These include but are not limited to `React`, `Angular`, `Vue` as well as `Next.js` or `Gatsby.js`.
 - The search bar and sort by dropdown do not need to work.
 - Obviously matching every stylistic aspect of this page may be difficult and time-consuming. Prioritise large elements and structural features before you try to recreate finer details.
 - You do not need to find exact matches for the fonts, icons or logos.
@@ -41,24 +40,22 @@ The sample data shown in the image is provided both in the `data.json` file and 
 The [Freerooms](./assets/freeroomsLogo.png) icon has been provided as a `png`. The photos of the buildings have also been provided in the [assets](./assets/) folder. The rest of the assets are taken from a library which has been provided below for your convenience.
 
 - Navbar: [Google Fonts](https://fonts.google.com/icons), from top to bottom:
-    - [Freerooms](./assets/freeroomsLogo.png)
-    - Search
-    - Map
-    - Grid View
-    - Dark Mode
+  - [Freerooms](./assets/freeroomsLogo.png)
+  - Search
+  - Map
+  - Grid View
+  - Dark Mode
 
 - Filter and sort
-    - Filter Alt
-    - Filter List
+  - Filter Alt
+  - Filter List
 
 ### Stretch Task 1
-
 The goal of this part is for you to demonstrate component state management. When you click on the Freerooms logo, if it is closed, 'open' the door, and if it is open, 'close' the door.
 
 The open and close door versions of the logo are in [assets](./assets/) folder.
 
 ### Stretch Task 2
-
 For this task, ensure that your site is fully **responsive** across various screen sizes and desktop views. All elements should adjust dynamically while maintaining a visually appealing layout.
 
 For extreme layouts, you have the option to redesign certain views to better fit the screen dimensions. You can take inspiration from the current layout of Freerooms, but feel free to adjust the design as you see fit.
@@ -80,55 +77,55 @@ Whilst most of our frontend applicants tend to have frontend experience, either 
 
 ```json
 [
-	{
-		"name": "AGSM",
-		"rooms_available": 9,
-		"building_file": "./agsm.webp"
-	},
-	{
-		"name": "Ainsworth Building",
-		"rooms_available": 16,
-		"building_picture": "./ainsworth.webp"
-	},
-	{
-		"name": "Anita B Lawrence Centre",
-		"rooms_available": 44,
-		"building_picture": "./anitb.webp"
-	},
-	{
-		"name": "Biological Sciences",
-		"rooms_available": 6,
-		"building_picture": "./biologicalScience.webp"
-	},
-	{
-		"name": "Biological Science (West)",
-		"rooms_available": 8,
-		"building_picture": "biologicalScienceWest.webp"
-	},
-	{
-		"name": "Blockhouse",
-		"rooms_available": 42,
-		"building_picture": "./blockhouse.webp"
-	},
-	{
-		"name": "Business School",
-		"rooms_available": 18,
-		"building_picture": "./businessSchool.webp"
-	},
-	{
-		"name": "Civil Engineering Building",
-		"rooms_available": 8,
-		"building_picture": "./civilBuilding.webp"
-	},
-	{
-		"name": "Colombo Building",
-		"rooms_available": 5,
-		"building_picture": "./colombo.webp"
-	},
-	{
-		"name": "Computer Science & Eng (K17)",
-		"rooms_available": 7,
-		"building_picture": "./cseBuilding.webp"
-	}
-]
+    {
+      "name": "AGSM",
+      "rooms_available": 9,
+      "building_file": "./agsm.webp"
+    },
+    {
+      "name": "Ainsworth Building",
+      "rooms_available": 16,
+      "building_picture": "./ainsworth.webp"
+    },
+    {
+      "name": "Anita B Lawrence Centre",
+      "rooms_available": 44,
+      "building_picture": "./anitb.webp"
+    },
+    {
+      "name": "Biological Sciences",
+      "rooms_available": 6,
+      "building_picture": "./biologicalScience.webp"
+    },
+    {
+      "name": "Biological Science (West)",
+      "rooms_available": 8,
+      "building_picture": "biologicalScienceWest.webp"
+    },
+    {
+      "name": "Blockhouse",
+      "rooms_available": 42,
+      "building_picture": "./blockhouse.webp"
+    },
+    {
+      "name": "Business School",
+      "rooms_available": 18,
+      "building_picture": "./businessSchool.webp"
+    },
+    {
+      "name": "Civil Engineering Building",
+      "rooms_available": 8,
+      "building_picture": "./civilBuilding.webp"
+    },
+    {
+      "name": "Colombo Building",
+      "rooms_available": 5,
+      "building_picture": "./colombo.webp"
+    },
+    {
+      "name": "Computer Science & Eng (K17)",
+      "rooms_available": 7,
+      "building_picture": "./cseBuilding.webp"
+    }
+  ]
 ```

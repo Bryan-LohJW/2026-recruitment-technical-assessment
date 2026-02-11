@@ -1,10 +1,10 @@
-export type Building = {
+export type BuildingData = {
 	name: string
 	rooms_total: number
 	building_picture: string
 }
 
-const useStaticData = (): Building[] => {
+const useStaticData = (): BuildingData[] => {
 	return [
 		{
 			name: 'AGSM',

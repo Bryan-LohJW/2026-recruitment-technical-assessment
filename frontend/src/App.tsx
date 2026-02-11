@@ -1,82 +1,16 @@
-import { useState } from 'react'
-import freeRoomOpen from './assets/freeRoomsLogo.png'
-import freeRoomClose from './assets/freeroomsDoorClosed.png'
-import {
-	Search,
-	Map,
-	GridViewRounded,
-	DarkMode,
-	FilterAlt,
-	FilterList,
-} from '@mui/icons-material'
 import './App.css'
-import type { Building } from './hooks/useStaticData'
+import Header from './components/Header'
+import Navbar from './components/Navbar'
+import Building from './components/Buildings'
 import useStaticData from './hooks/useStaticData'
 
 function App() {
-	const [isIconOpen, setIsIconOpen] = useState(true)
-	const selectedStyle = 'text-white bg-primary'
-	const unselectedStyle = 'text-primary bg-white'
-
 	const buildingData = useStaticData()
 
 	return (
 		<>
-			<header className="w-full flex items-center justify-between border-b border-gray-400 px-2">
-				<div className="flex items-center">
-					<img
-						src={isIconOpen ? freeRoomOpen : freeRoomClose}
-						className="h-12 cursor-pointer"
-						alt="logo"
-						onClick={() => setIsIconOpen(!isIconOpen)}
-					/>
-					<h1 className="hidden md:block text-primary text-3xl font-medium">
-						Freerooms
-					</h1>
-				</div>
-				<div className="flex gap-2">
-					<button
-						className={`p-1 border border-primary rounded ${unselectedStyle} transition-transform duration-100 active:scale-110`}
-					>
-						<Search />
-					</button>
-					<button
-						className={`p-1 border border-primary rounded ${selectedStyle} transition-transform duration-100 active:scale-110`}
-					>
-						<GridViewRounded />
-					</button>
-					<button
-						className={`p-1 border border-primary rounded ${unselectedStyle} transition-transform duration-100 active:scale-110`}
-					>
-						<Map />
-					</button>
-					<button
-						className={`p-1 border border-primary rounded ${unselectedStyle} transition-transform duration-100 active:scale-110`}
-					>
-						<DarkMode />
-					</button>
-				</div>
-			</header>
-			<nav className="flex flex-wrap px-2 justify-between mt-4 mb-2 gap-2">
-				<button className="order-2 md:order-1 shrink-0 h-12 px-4 w-36 rounded-lg text-primary font-bold flex items-center gap-4 border-2 border-primary active:scale-110">
-					<FilterAlt />
-					<p>Filters</p>
-				</button>
-				<div className="transition-transform duration-100 order-1 md:order-2 w-full max-w-200 flex gap-4 border border-slate-300 text-gray-700 rounded-lg h-10 items-center p-6 md:w-1/2 focus-within:ring-2">
-					<div className="">
-						<Search />
-					</div>
-					<input
-						className="flex-1 border-none outline-none"
-						type="text"
-						placeholder="Search for a building..."
-					/>
-				</div>
-				<button className="transition-transform duration-100 order-3 shrink-0 h-12 px-4 w-36 rounded-lg text-primary font-bold flex items-center gap-4 border-2 border-primary active:scale-110">
-					<FilterList />
-					<p>Sort</p>
-				</button>
-			</nav>
+			<Header />
+			<Navbar />
 			<div className="m-2 h-full grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5">
 				{buildingData.map((building) => (
 					<Building key={building.name} {...building} />
@@ -87,33 +21,3 @@ function App() {
 }
 
 export default App
-
-const Building = (data: Building) => {
-	return (
-		<div
-			className={`transition-transform duration-100 shadow active:scale-105 hover:shadow-2xl relative flex justify-between items-center md:flex-col-reverse md:items-end h-30 w-full rounded-xl overflow-hidden p-4 text-white font-semibold md:h-52 lg:h-104`}
-		>
-			<p className="md:bg-primary md:w-full md:h-14 md:flex md:items-center md:p-4 md:rounded-xl">
-				{data.name}
-			</p>
-			<div className="flex items-center gap-4 bg-white text-black text-xs px-4 py-3 rounded-3xl">
-				<div className="bg-green-600 h-3 w-3 rounded-full"></div>
-				<div className="flex">
-					<p>{data.rooms_total}</p>
-					<p className="md:hidden">/{data.rooms_total}</p>
-					<p
-						className="hidden md:block"
-						style={{ whiteSpace: 'pre' }}
-					>
-						{' '}
-						rooms available
-					</p>
-				</div>
-			</div>
-			<div
-				className="absolute top-0 left-0 w-full h-full bg-cover bg-center brightness-60 -z-10"
-				style={{ backgroundImage: `url(${data.building_picture})` }}
-			></div>
-		</div>
-	)
-}

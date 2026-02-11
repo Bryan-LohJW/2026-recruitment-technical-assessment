@@ -3,7 +3,7 @@ import type { BuildingData } from '../hooks/useStaticData'
 const Building = (data: BuildingData) => {
 	return (
 		<div
-			className={`transition-transform duration-100 shadow active:scale-105 hover:shadow-2xl relative flex justify-between items-center md:flex-col-reverse md:items-end h-30 w-full rounded-xl overflow-hidden p-4 text-white font-semibold md:h-52 lg:h-104`}
+			className={`cursor-pointer transition-transform duration-100 shadow active:scale-105 hover:shadow-2xl relative flex justify-between items-center md:flex-col-reverse md:items-end h-30 w-full rounded-xl overflow-hidden p-4 text-white font-semibold md:h-52 xl:h-104`}
 		>
 			<p className="md:bg-primary md:w-full md:h-14 md:flex md:items-center md:p-4 md:rounded-xl">
 				{data.name}

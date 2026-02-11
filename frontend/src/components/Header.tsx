@@ -17,28 +17,28 @@ const Header = () => {
 					alt="logo"
 					onClick={() => setIsIconOpen(!isIconOpen)}
 				/>
-				<h1 className="hidden md:block text-primary text-3xl font-medium">
+				<h1 className="cursor-pointer hidden md:block text-primary text-3xl font-medium">
 					Freerooms
 				</h1>
 			</div>
 			<div className="flex gap-2">
 				<button
-					className={`p-1 border border-primary rounded ${unselectedStyle} transition-transform duration-100 active:scale-110`}
+					className={`cursor-pointer p-1 border border-primary rounded ${unselectedStyle} transition-transform duration-100 active:scale-110`}
 				>
 					<Search />
 				</button>
 				<button
-					className={`p-1 border border-primary rounded ${selectedStyle} transition-transform duration-100 active:scale-110`}
+					className={`cursor-pointer p-1 border border-primary rounded ${selectedStyle} transition-transform duration-100 active:scale-110`}
 				>
 					<GridViewRounded />
 				</button>
 				<button
-					className={`p-1 border border-primary rounded ${unselectedStyle} transition-transform duration-100 active:scale-110`}
+					className={`cursor-pointer p-1 border border-primary rounded ${unselectedStyle} transition-transform duration-100 active:scale-110`}
 				>
 					<Map />
 				</button>
 				<button
-					className={`p-1 border border-primary rounded ${unselectedStyle} transition-transform duration-100 active:scale-110`}
+					className={`cursor-pointer p-1 border border-primary rounded ${unselectedStyle} transition-transform duration-100 active:scale-110`}
 				>
 					<DarkMode />
 				</button>
